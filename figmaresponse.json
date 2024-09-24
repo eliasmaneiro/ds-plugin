@@ -1,0 +1,344 @@
+{
+    "error": false,
+    "status": 200,
+    "meta": {
+        "users": [
+            {
+                "id": "903744753717019211",
+                "name": "Elias Maneiro",
+                "email": "eliasmaneiro.73@gmail.com",
+                "handle": "Elias Maneiro",
+                "img_url": "https://www.gravatar.com/avatar/e6352e9f4e12f75080f47ac88b851097?size=240&default=https%3A%2F%2Fs3-alpha.figma.com%2Fstatic%2Fuser_e_v2.png",
+                "created_at": "2020-10-29T20:39:00.047Z",
+                "email_validated_at": "2020-10-29T20:39:00.134Z",
+                "utc_offset": null,
+                "profile": {
+                    "job_title": "designer"
+                },
+                "phone_number": null,
+                "student_validated_at": null,
+                "description": null,
+                "plugin_publishing_blocked_at": null,
+                "community_commenting_blocked_at": null,
+                "community_blocked_at": null,
+                "external_restricted_org_id": null,
+                "dev_tokens": [
+                    {
+                        "id": "2311442",
+                        "description": "API Figma",
+                        "last_used": "2024-08-25T23:00:30.974Z",
+                        "scopes": [
+                            "files:read",
+                            "file_dev_resources:read"
+                        ],
+                        "expires_at": "2024-11-23T22:59:45.112Z"
+                    },
+                    {
+                        "id": "2135809",
+                        "description": "personal figma access token",
+                        "last_used": "2024-06-30T23:58:26.622Z",
+                        "scopes": [
+                            "files:read",
+                            "file_dev_resources:read"
+                        ],
+                        "expires_at": null
+                    },
+                    {
+                        "id": "2311228",
+                        "description": "docs-generated-token",
+                        "last_used": "2024-08-25T20:33:56.096Z",
+                        "scopes": [
+                            "files:read",
+                            "file_code_connect:read",
+                            "file_code_connect:write",
+                            "file_comments:write",
+                            "file_dev_resources:read",
+                            "file_dev_resources:write",
+                            "webhooks:write"
+                        ],
+                        "expires_at": "2024-08-26T20:33:53.280Z"
+                    }
+                ],
+                "oauth_tokens": [],
+                "realtime_token": "/me-903744753717019211:1725366432:0:7b2f4ee18dc5e438621a2e0a778d92fc68924e41",
+                "realtime_token_inactive": "/user-inactive-903744753717019211:1725366432:0:327dd8ea199378c2012e9c90a992b8abd9011f5f",
+                "two_factor_enabled": false,
+                "two_factor_app_enabled": false,
+                "google_sso_only": "2020-10-29T20:39:00.040Z",
+                "saml_sso_only": false,
+                "experiment_seed": 369120,
+                "community_profile_id": null,
+                "community_profile_handle": null,
+                "community_beta_at": null,
+                "locale": "en",
+                "keyboard_layout": "UNKNOWN",
+                "mouse_scroll_to_zoom": false,
+                "right_click_drag_to_pan": false,
+                "color_profile": "srgb",
+                "sharing_restricted": false,
+                "cmty_buyer_tos_accepted_at": null,
+                "stripe_account_status": "none",
+                "cmty_seller_capabilities": [
+                    "extension"
+                ],
+                "can_sell_on_community": null,
+                "has_passed_visual_compliance": false,
+                "stripe_connected_account_id": null,
+                "screenreader_enabled": false,
+                "community_purchasing_blocked_at": null,
+                "experiment_assignments": [],
+                "plans": [
+                    {
+                        "plan_id": "1303071063066318175",
+                        "is_guest": false,
+                        "is_org": false,
+                        "name": "Elias Maneiro's team",
+                        "img_url": null
+                    },
+                    {
+                        "plan_id": "1402329579787786560",
+                        "is_guest": true,
+                        "is_org": true,
+                        "name": "Transsa"
+                    }
+                ],
+                "has_content_from_other_plans": true
+            }
+        ],
+        "orgs": [
+            {
+                "id": "1402329579787786560",
+                "created_at": "2024-08-05T16:37:05.846Z",
+                "name": "Transsa",
+                "domain_capture": false,
+                "custom_help_url": null,
+                "img_url": null,
+                "img_urls": null,
+                "handle": null,
+                "standing": "GOOD",
+                "stripe_customer_id": "cus_QbhIOxoOjBjEZw",
+                "billing": "quarterly_auto_charge",
+                "plugins_whitelist_enforced": false,
+                "locked_quantity_full_members": null,
+                "invite_whitelist": {
+                    "enabled": false
+                },
+                "description": null,
+                "deleted_at": null,
+                "experiment_seed": 834393,
+                "experiment_eligible": false,
+                "featured_scim_metadata": null,
+                "template_picker_disabled": null,
+                "figjam_disabled_at": null,
+                "widgets_whitelist_enforced": false,
+                "locked_quantity_figjam_members": null,
+                "k12_google_org": false,
+                "vat_gst_id": "",
+                "target_locality": "US",
+                "plan": "organization",
+                "plugin_requests_allowed": true,
+                "widget_requests_allowed": true,
+                "tax_id_verification_status": null,
+                "tax_id_verified_at": null,
+                "ai_features_disabled_at": null,
+                "workspaces_nux_active_at": null,
+                "figma_provided_libraries_disabled_at": null,
+                "legal_name": null,
+                "currency": null,
+                "security_add_on_enabled_at": null,
+                "mfa_required": null,
+                "billing_tier": "org",
+                "_internal_only_written_by_backfill": 1,
+                "upgrade_approval_settings": {
+                    "expert": "instant_approval_if_available_seats",
+                    "developer": "instant_approval_if_available_seats",
+                    "collaborator": "instant_approval_if_available_seats"
+                },
+                "google_sso_only": false,
+                "saml_sso_only": false,
+                "realtime_token": "/org-members-1402329579787786560:1725366432:0:83c05fda1d72e1cb6662a0d03cea23d9568bef62",
+                "public_plugins_allowed": true,
+                "invite_whitelist_enforced": false,
+                "invite_whitelist_guest_invite_setting": null,
+                "past_due_at": null,
+                "community_profile_id": null,
+                "community_profile_handle": null,
+                "bigma_enabled": false,
+                "invite_whitelist_member_allowlist_enabled": null,
+                "voice_enabled": true,
+                "workshop_enabled": true,
+                "cursor_chat_disabled": null,
+                "invite_whitelist_enforced_guests": null,
+                "ip_ranges": [],
+                "design_default_paid_status": "starter",
+                "whiteboard_default_paid_status": "starter",
+                "upgrade_approval_setting": "auto_approve_with_surplus_seats",
+                "shared_org_license_group_settings": null,
+                "are_custom_templates_allowed": true,
+                "should_auto_renew": true,
+                "workspaces_count": 0,
+                "license_groups_count": 0,
+                "cmty_publish_as_user_enabled": false,
+                "has_automatic_upcoming_invoice": true,
+                "ai_features_disabled": false,
+                "figma_provided_libraries_disabled": false,
+                "is_dev_mode_opt_in_accepted": true,
+                "stripe_memo": null,
+                "self_serve": true,
+                "is_slides_disabled": false,
+                "discovery_enabled": false,
+                "activity_logs_max_query_duration_in_days": 366,
+                "tier": "org",
+                "experiment_assignments": []
+            }
+        ],
+        "teams": [
+            {
+                "id": "1303071063066318175",
+                "name": "Elias Maneiro's team",
+                "created_at": "2023-11-05T18:59:11.319Z",
+                "img_url": null,
+                "synced_at": null,
+                "providers": null,
+                "stripe_customer_id": null,
+                "subscription": null,
+                "editors": 1,
+                "projects": 1,
+                "student_team_at": null,
+                "student_autoverifying_team_at": null,
+                "grace_period_end": null,
+                "org_id": null,
+                "img_urls": null,
+                "org_access": null,
+                "deleted_at": null,
+                "blocked_at": null,
+                "trial_period_end": null,
+                "description": null,
+                "deleted_by": null,
+                "experiment_seed": 551279,
+                "license_group_id": null,
+                "migrated_stripe_customer_id": null,
+                "community_blocked_at": null,
+                "default_permission": null,
+                "vat_gst_id": "",
+                "grace_period_type": null,
+                "workspace_id": null,
+                "default_color_palette_uuid": null,
+                "tax_id_verification_status": null,
+                "tax_id_verified_at": null,
+                "legal_name": null,
+                "student_team_state": "not_student_team",
+                "ai_features_disabled_at": null,
+                "editors_whiteboard": 1,
+                "editors_total_unique": 1,
+                "sharing_audience_control": "invite_only",
+                "_internal_only_written_by_backfill": 0,
+                "figma_provided_libraries_disabled_at": null,
+                "upgrade_approval_settings": {
+                    "expert": "instant_approval_if_available_seats",
+                    "developer": "instant_approval_if_available_seats",
+                    "collaborator": "instant_approval_if_available_seats"
+                },
+                "restrictions_list": [
+                    "projects_limited"
+                ],
+                "student_team": false,
+                "starter_team": true,
+                "DEPRECATED_pro_team": false,
+                "org_team": false,
+                "subscription_raw": null,
+                "community_profile_id": null,
+                "community_profile_handle": null,
+                "is_paid": false,
+                "ai_features_disabled": false,
+                "ai_data_sharing_enabled": true,
+                "org_browsable": false,
+                "hidden": false,
+                "last_upgraded_at": null,
+                "figma_provided_libraries_disabled": false,
+                "experiment_assignments": []
+            }
+        ],
+        "team_admin_roles_for_authed_users": [
+            {
+                "id": "960595912",
+                "created_at": "2023-11-05T18:59:11.418Z",
+                "updated_at": "2023-11-05T18:59:11.418Z",
+                "level": 999,
+                "user_id": "903744753717019211",
+                "team_id": "1303071063066318175",
+                "pending_email": null,
+                "resource_type": "team",
+                "resource_id_or_key": "1303071063066318175",
+                "pending": false
+            }
+        ],
+        "org_users": [
+            {
+                "id": "1402329639404015187",
+                "org_id": "1402329579787786560",
+                "user_id": "903744753717019211",
+                "permission": "guest",
+                "drafts_folder_id": "262547680",
+                "created_at": "2024-08-05T16:37:20.061Z",
+                "updated_at": "2024-08-28T09:22:58.850Z",
+                "account_type": "full",
+                "account_type_changed_at": "2024-08-22T17:13:11.965Z",
+                "description": null,
+                "user_state_changed_at": "2024-08-22T17:13:11.966Z",
+                "whiteboard_paid_status": "full",
+                "agreed_to_community_tos_at": null,
+                "show_figjam_user_onboarding": null,
+                "has_shown_figjam_admin_onboarding": null,
+                "has_shown_figjam_admin_launch_onboarding": null,
+                "dev_mode_paid_status": "restricted",
+                "_internal_only_written_by_backfill": 0,
+                "design_paid_status": "full",
+                "license_admin": false,
+                "is_email_validated": true,
+                "user": {
+                    "id": "903744753717019211",
+                    "email": "eliasmaneiro.73@gmail.com",
+                    "handle": "Elias Maneiro",
+                    "img_url": "https://www.gravatar.com/avatar/e6352e9f4e12f75080f47ac88b851097?size=240&default=https%3A%2F%2Fs3-alpha.figma.com%2Fstatic%2Fuser_e_v2.png"
+                },
+                "license_group_admins": [],
+                "workspace_users": []
+            }
+        ],
+        "profiles": [
+            {
+                "id": "903744753758316562",
+                "location": null,
+                "profile_handle": "8db591ff_ef6a_4",
+                "public_at": null,
+                "follower_count": 0,
+                "following_count": 0,
+                "primary_user_id": "903744753717019211",
+                "name": "Elias Maneiro",
+                "img_url": "https://www.gravatar.com/avatar/e6352e9f4e12f75080f47ac88b851097?size=240&default=https%3A%2F%2Fs3-alpha.figma.com%2Fstatic%2Fuser_e_v2.png",
+                "img_urls": {
+                    "120_120": "https://www.gravatar.com/avatar/e6352e9f4e12f75080f47ac88b851097?size=240&default=https%3A%2F%2Fs3-alpha.figma.com%2Fstatic%2Fuser_e_v2.png"
+                },
+                "current_user_is_following": null,
+                "current_user_is_followed": null,
+                "is_restricted_by_current_user": null,
+                "realtime_token": "/profile-903744753758316562:1725366432:0:c911aa43037ecc1e1e180475f6f84e55bc3f4168",
+                "entity_type": "user",
+                "associated_users": [
+                    {
+                        "user_id": "903744753717019211",
+                        "is_primary_user": true,
+                        "email": "eliasmaneiro.73@gmail.com",
+                        "can_sell_on_community": null
+                    }
+                ],
+                "badges": [],
+                "has_published": false,
+                "org_id": null,
+                "team_id": null
+            }
+        ]
+    },
+    "i18n": null
+}

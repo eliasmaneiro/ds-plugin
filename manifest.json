@@ -1,0 +1,23 @@
+{
+  "name": "Siamese DS Sync",
+  "id": "1409699514377721125",
+  "api": "1.0.0",
+  "main": "code.js",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "documentAccess": "dynamic-page",
+  "editorType": [
+    "figma"
+  ],
+  "ui": "ui.html",
+  "networkAccess": {
+    "allowedDomains": [
+      "https://dev-transsa.siamese.digital",
+      "https://dev-propiteq.siamese.digital",
+      "https://transsa.siamese.digital",
+      "https://propiteq.siamese.digital"
+    ],
+    "reasoning": "",
+    "devAllowedDomains": ["http://localhost:3000"]
+  }
+}

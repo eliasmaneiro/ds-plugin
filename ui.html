@@ -1,0 +1,232 @@
+<div class="container">
+  <div class="login" id="login">
+    <div class="inputs">
+      <!-- <input type="text" placeholder="auth-client-key" id="auth-client-key">
+      <input type="text" placeholder="plugin-key" id="auth-key">
+      <input type="text" placeholder="Design system endpoint" id="ds-endpoint" value="http://localhost:6006/sync-from-plugin"> -->
+    </div>
+    <div class="buttons" id="buttons">
+      <!-- <button id="login-btn" disabled>Login</button>
+      <button id="cancel-btn" disabled>Cancel</button> -->
+      <div id="pages-to-sync">
+      </div>
+      <button id="try-sync-btn-2">Start sync...</button>
+    </div>
+    <div class="loader-container auth" id="loader-container-auth">
+      <div class="loader"></div>
+      <p>authenticating...</p>
+    </div>
+  </div>
+  <div class="sync" id="sync">
+    <h2>Synchronizing the design system</h2>
+    <div class="loader-container">
+      <div class="loader"></div>
+      <p>Wait a moment...</p>
+    </div>
+    <div class="pagination">
+      <div>
+        <b>Module: </b> <p id="moduleName"></p>
+      </div>
+      <div>
+        <b>Pag: <label id="pageName"></label></b> <p>
+          <label id="actuallyCount"></label> / 
+          <label id="totalCount"></label></p>
+      </div>
+      <div>
+        <b>Component: <label id="componentName"></label></b> <p>
+          <label id="componentCount"></label> / 
+          <label id="componentChildrens"></label></p>
+      </div>
+      <button id="cancel-sync-btn">Cancel Sync</button>
+    </div>
+  </div>
+  <div id="sync-error">
+    <p>Error trying to sync</p>
+    <button id="try-sync-btn">Try again...</button>
+  </div>
+</div>
+<script>
+const dsEndpoint = 'http://localhost:3000';
+// function uuidv4() {
+//   return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
+//     (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
+//   );
+// }
+
+// const authClientKeyInput = document.getElementById('auth-client-key');
+// const pluginKey = document.getElementById('auth-key');
+
+// pluginKey.value = uuidv4();
+// authClientKeyInput.value = uuidv4();
+
+document.getElementById('try-sync-btn-2').onclick = () => {
+  const selectedPages = document.querySelectorAll('#pages-to-sync input[type=checkbox]:checked');
+  const selectedPagesArr = [];
+  selectedPages.forEach(e => {
+    selectedPagesArr.push(e.name)
+  })
+  const loginSection = document.getElementById('login');
+  const syncSection = document.getElementById('sync');
+  // const buttonsGroup = document.getElementById('buttons');
+  // buttonsGroup.style.display = 'none';
+  const loaderContainerAuth = document.getElementById('loader-container-auth');
+  loaderContainerAuth.style.visibility = 'visible';
+  setTimeout(() => {
+    const message = parent.postMessage({
+      pluginMessage: {msg: 'isAuthenticate', type: 'variables', endpoint: dsEndpoint, pages: selectedPagesArr},
+  }, '*');
+    loginSection.style.display = 'none';
+    loaderContainerAuth.style.visibility = 'hidden';
+    syncSection.style.display = 'block';
+  }, 2000);
+}
+
+document.getElementById('cancel-sync-btn').onclick = () => {
+  const loginSection = document.getElementById('login');
+  const syncSection = document.getElementById('sync');
+  const buttonsGroup = document.getElementById('buttons');
+  loginSection.style.display = 'flex';
+  syncSection.style.display = 'none';
+  buttonsGroup.style.display = 'block';
+  const message = parent.postMessage({
+      pluginMessage: {msg: 'cancel'},
+  }, '*');
+}
+
+document.getElementById('try-sync-btn').onclick = () => {
+      const syncError = document.getElementById('sync-error');
+      const syncSection = document.getElementById('sync');
+      syncError.style.display = 'none';
+      syncSection.style.display = 'block';
+}
+
+// document.getElementById('try-sync-btn-2').onclick = () => {
+  // const message = parent.postMessage({
+  //     pluginMessage: {msg: 'isAuthenticate', type: 'variables', endpoint: dsEndpoint},
+  // }, '*');
+// };
+
+onmessage = (event) => {
+  const { moduleName, pageName, actuallyCount, totalCount, component, pages } = event.data.pluginMessage;
+  if(moduleName) {
+    const moduleNameElement = document.getElementById("moduleName");
+    moduleNameElement.innerText = moduleName;
+  }
+  if(pageName) {
+    const pageNameElement = document.getElementById("pageName");
+    pageNameElement.innerText = pageName;
+  }
+  if(actuallyCount) {
+    const actuallyCountElement = document.getElementById("actuallyCount");
+    actuallyCountElement.innerText = actuallyCount;
+  }
+  if(totalCount) {
+    const totalCountElement = document.getElementById("totalCount");
+    totalCountElement.innerText = totalCount;
+  }
+  if(component) {
+    const { name, componentChildrens, componentCount } = component;
+    if(name) {
+      const componentNameElement = document.getElementById("componentName");
+      componentNameElement.innerText = name;
+    }
+    if(componentChildrens) {
+      const componentChildrensElement = document.getElementById("componentChildrens");
+      componentChildrensElement.innerText = componentChildrens;
+    }
+    if(componentCount) {
+      const componentCountElement = document.getElementById("componentCount");
+      componentCountElement.innerText = componentCount;
+    }
+  }
+  if(pages) {
+    const pagesToSync = document.getElementById("pages-to-sync");
+    let htmlOptions = '';
+    for (let i = 0; i < pages.length; i++) {
+      const e = pages[i];
+      htmlOptions += `<div><input class="selectorPage" type="checkbox" id="${e.id}" name="${e.id}" value="${e.id}"><label for="${e.id}"> ${e.name}</label><br></div>`
+    }
+    pagesToSync.innerHTML = htmlOptions;
+  }
+}
+
+</script>
+
+<style>
+  .container {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    .sync {
+      display: none;
+      margin-bottom: 10px;
+      .pagination {
+          display: flex;
+          gap: 2px;
+          flex-direction: column;
+          div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+      }
+    }
+    .login {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      .inputs {
+        width: 100%;
+        input {
+          margin-bottom: 10px;
+          width: 100%;
+        }
+      }
+      .buttons {
+        text-align: center;
+      }
+    }
+  }
+
+  #sync-error {
+        display: none;
+        text-align: center;
+        p {
+          color: red;
+        }
+      }
+
+  .loader-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    &.auth {
+      visibility: hidden;
+    }
+  }
+  .loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-bottom: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  #pages-to-sync {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+</style>
